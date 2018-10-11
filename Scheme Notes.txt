@@ -1,0 +1,25 @@
+If I am correct, car will return the first item in the list.  cdr will return a list excluding the first element.
+
+I'm confused on the other variations of these, more specifically things like cadar, caddr, cddr, etc.
+
+Say I have this as a random example:
+
+define X '(a b (c d e))
+
+(car X)
+(cdr X)
+(cadr X)
+(cadar X)
+(car X) would produce a, (cdr X) would produce (b (c d e)), cadr would produce b. But I don't know how to infer any other variation of car/cdr like cadar.
+
+You can infer the meaning of these functions by parsing their name:
+
+between the first letter ('c') and the last ('r'), a 'a' means "the car of" and a 'd' means "the cdr of".
+
+So:
+
+cadr is "the car of the cdr",
+cddr is the cdr of the cdr,
+cadar is the "car of the cdr of the car" (thus the parameter has to be a list of list),
+etc.
+
