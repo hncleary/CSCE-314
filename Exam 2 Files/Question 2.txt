@@ -1,0 +1,30 @@
+start with ? <assign> -> <var> = <expr>
+
+<assign>  
+<var> = <expr>
+<var> = <factor> * <expr>
+<var> = <factor> * <div>
+<var> = <factor> * <stmt>
+<var> = <factor> * (<expr>)
+<var> = <factor> * (<factor>)
+<var> = <factor> * (<div>)
+<var> = <factor> * (<stmt> + <div>)
+<var> = <factor> * (<stmt> + <div> + <div>)
+<var> = <factor> * (<stmt> + <div> + <stmt>)
+<var> = <factor> * (<stmt> + <div> + <var>)
+<var> = <factor> * (<stmt> + <div> + D)
+<var> = <factor> * (<stmt> + <stmt> + D)
+<var> = <factor> * (<stmt> + --<var> + D)
+<var> = <factor> * (<stmt> + --C + D)
+<var> = <factor> * (<var> + --C + D)
+<var> = <factor> * (E + --C + D)
+<var> = <div> * (E + --C + D)
+<var> = <stmt> * (E + --C + D)
+<var> = ++<var> * (E + --C + D)
+<var> = ++A * (E + --C + D)
+D = ++A * (E + --C + D)
+
+
+
+
+END with ? D = ++A * (E + --C + D)

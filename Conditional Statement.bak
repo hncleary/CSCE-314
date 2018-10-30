@@ -1,0 +1,13 @@
+(define (conditions x)
+  (cond ( (> x 2)
+          (display "x is greater than two \n"))
+        ( (< x 2)
+          (display "x is less than two"))
+        (else 0
+         )
+        )
+  )
+
+(display (conditions 5))
+(newline)
+
